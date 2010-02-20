@@ -8,6 +8,13 @@
 
 #import "ESRenderer.h"
 
+@interface ESRenderer()
+
+-(void)updateScene:(float)delta;
+-(void)renderScene;
+
+@end
+
 @implementation ESRenderer
 
 // Create an OpenGL ES 1.1 context
@@ -16,70 +23,83 @@
     if ((self = [super init]))
     {
         context = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES1];
-
+        
         if (!context || ![EAGLContext setCurrentContext:context])
         {
             [self release];
             return nil;
         }
-
+        
+        // Gett the bounds of the main screen
+        CGRect rect = [[UIScreen mainScreen] applicationFrame];
+        
+        // Set up OpenGL projection matrix
+        glMatrixMode(GL_PROJECTION);
+        glLoadIdentity();
+        glOrthof(0, rect.size.width, 0, rect.size.height, -1, 1);
+        glMatrixMode(GL_MODELVIEW);
+        
+        // Init OpenGL States
+        glEnable(GL_BLEND);
+        glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+        glEnable(GL_TEXTURE_2D);
+        glDisable(GL_DEPTH_TEST);
+        glTexEnvi(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_BLEND_SRC);
+        glEnableClientState(GL_VERTEX_ARRAY);
+        glEnableClientState(GL_TEXTURE_COORD_ARRAY);
+        glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+        
         // Create default framebuffer object. The backing will be allocated for the current layer in -resizeFromLayer
         glGenFramebuffersOES(1, &defaultFramebuffer);
         glGenRenderbuffersOES(1, &colorRenderbuffer);
         glBindFramebufferOES(GL_FRAMEBUFFER_OES, defaultFramebuffer);
         glBindRenderbufferOES(GL_RENDERBUFFER_OES, colorRenderbuffer);
         glFramebufferRenderbufferOES(GL_FRAMEBUFFER_OES, GL_COLOR_ATTACHMENT0_OES, GL_RENDERBUFFER_OES, colorRenderbuffer);
+        
+        // Init the Trollface image
+        bunnyRabbit = [[Texture2D alloc] initWithImage:[UIImage imageNamed:@"Bunny.png"]];
+        
+        lastTime = CFAbsoluteTimeGetCurrent();
+        
     }
-
+    
     return self;
 }
 
-- (void)render
+- (void)mainGameLoop
 {
-    // Replace the implementation of this method to do your own custom drawing
+    CFTimeInterval	time;
+    float			delta;
+    time = CFAbsoluteTimeGetCurrent();
+    delta = (time - lastTime) / (1.0f/60.0f);
+    
+    [self updateScene:delta];	
+    [self renderScene];	
+    
+    lastTime = time;
+}
 
-    static const GLfloat squareVertices[] = {
-        -0.5f,  -0.33f,
-         0.5f,  -0.33f,
-        -0.5f,   0.33f,
-         0.5f,   0.33f,
-    };
+- (void)updateScene:(float)delta
+{
+    // Update game logic.
+}
 
-    static const GLubyte squareColors[] = {
-        255, 255,   0, 255,
-        0,   255, 255, 255,
-        0,     0,   0,   0,
-        255,   0, 255, 255,
-    };
-
-    static float transY = 0.0f;
-
+- (void)renderScene
+{
+    
     // This application only creates a single context which is already set current at this point.
     // This call is redundant, but needed if dealing with multiple contexts.
     [EAGLContext setCurrentContext:context];
-
+    
     // This application only creates a single default framebuffer which is already bound at this point.
     // This call is redundant, but needed if dealing with multiple framebuffers.
     glBindFramebufferOES(GL_FRAMEBUFFER_OES, defaultFramebuffer);
     glViewport(0, 0, backingWidth, backingHeight);
-
-    glMatrixMode(GL_PROJECTION);
-    glLoadIdentity();
-    glMatrixMode(GL_MODELVIEW);
-    glLoadIdentity();
-    glTranslatef(0.0f, (GLfloat)(sinf(transY)/2.0f), 0.0f);
-    transY += 0.075f;
-
-    glClearColor(0.5f, 0.5f, 0.5f, 1.0f);
+    
     glClear(GL_COLOR_BUFFER_BIT);
-
-    glVertexPointer(2, GL_FLOAT, 0, squareVertices);
-    glEnableClientState(GL_VERTEX_ARRAY);
-    glColorPointer(4, GL_UNSIGNED_BYTE, 0, squareColors);
-    glEnableClientState(GL_COLOR_ARRAY);
-
-    glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
-
+    
+    [bunnyRabbit drawAtPoint:CGPointMake(120, 270)];
+    
     // This application only creates a single color renderbuffer which is already bound at this point.
     // This call is redundant, but needed if dealing with multiple renderbuffers.
     glBindRenderbufferOES(GL_RENDERBUFFER_OES, colorRenderbuffer);
@@ -93,13 +113,13 @@
     [context renderbufferStorage:GL_RENDERBUFFER_OES fromDrawable:layer];
     glGetRenderbufferParameterivOES(GL_RENDERBUFFER_OES, GL_RENDERBUFFER_WIDTH_OES, &backingWidth);
     glGetRenderbufferParameterivOES(GL_RENDERBUFFER_OES, GL_RENDERBUFFER_HEIGHT_OES, &backingHeight);
-
+    
     if (glCheckFramebufferStatusOES(GL_FRAMEBUFFER_OES) != GL_FRAMEBUFFER_COMPLETE_OES)
     {
         NSLog(@"Failed to make complete framebuffer object %x", glCheckFramebufferStatusOES(GL_FRAMEBUFFER_OES));
         return NO;
     }
-
+    
     return YES;
 }
 
@@ -111,20 +131,22 @@
         glDeleteFramebuffersOES(1, &defaultFramebuffer);
         defaultFramebuffer = 0;
     }
-
+    
     if (colorRenderbuffer)
     {
         glDeleteRenderbuffersOES(1, &colorRenderbuffer);
         colorRenderbuffer = 0;
     }
-
+    
     // Tear down context
     if ([EAGLContext currentContext] == context)
         [EAGLContext setCurrentContext:nil];
-
+    
+    [bunnyRabbit release];
+    
     [context release];
     context = nil;
-
+    
     [super dealloc];
 }
 

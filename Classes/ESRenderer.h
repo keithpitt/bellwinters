@@ -6,28 +6,35 @@
 //  Copyright Apple Inc 2010. All rights reserved.
 //
 
+#import "ESRenderer.h"
+#import "Texture2D.h"
+
 #import <QuartzCore/QuartzCore.h>
 
 #import <OpenGLES/EAGL.h>
 #import <OpenGLES/EAGLDrawable.h>
-
 #import <OpenGLES/ES1/gl.h>
 #import <OpenGLES/ES1/glext.h>
 
-@interface ESRenderer : NSObject
+@interface ESRenderer : NSObject <UIApplicationDelegate>
 {
 @private
     EAGLContext *context;
-
+    
     // The pixel dimensions of the CAEAGLLayer
     GLint backingWidth;
     GLint backingHeight;
-
+    
+    CFTimeInterval lastTime;
+    
     // The OpenGL ES names for the framebuffer and renderbuffer used to render to this view
     GLuint defaultFramebuffer, colorRenderbuffer;
+    
+    Texture2D * bunnyRabbit;
+    
 }
 
-- (void)render;
+- (void)mainGameLoop;
 - (BOOL)resizeFromLayer:(CAEAGLLayer *)layer;
 
 @end

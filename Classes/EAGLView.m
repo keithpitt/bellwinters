@@ -28,31 +28,31 @@
     {
         // Get the layer
         CAEAGLLayer *eaglLayer = (CAEAGLLayer *)self.layer;
-
+        
         eaglLayer.opaque = TRUE;
         eaglLayer.drawableProperties = [NSDictionary dictionaryWithObjectsAndKeys:
                                         [NSNumber numberWithBool:FALSE], kEAGLDrawablePropertyRetainedBacking, kEAGLColorFormatRGBA8, kEAGLDrawablePropertyColorFormat, nil];
-
+        
         renderer = [[ESRenderer alloc] init];
-
+        
         if (!renderer)
         {
-         [self release];
-         return nil;
+            [self release];
+            return nil;
         }
-
+        
         animating = FALSE;
         animationFrameInterval = 1;
         animationTimer = nil;
-		
+        
     }
-
+    
     return self;
 }
 
 - (void)drawView:(id)sender
 {
-    [renderer render];
+    [renderer mainGameLoop];
 }
 
 - (void)layoutSubviews
@@ -77,7 +77,7 @@
     if (frameInterval >= 1)
     {
         animationFrameInterval = frameInterval;
-
+        
         if (animating)
         {
             [self stopAnimation];
@@ -108,7 +108,7 @@
 - (void)dealloc
 {
     [renderer release];
-
+    
     [super dealloc];
 }
 
