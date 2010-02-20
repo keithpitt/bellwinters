@@ -1,0 +1,398 @@
+TWinterbells
+v7
+r0
+t288355963.007254
+cCheck dependencies
+cProcessInfoPlistFile /Users/keith/iPhone/Projects/Winterbells/build/Debug-iphonesimulator/Winterbells.app/Info.plist Winterbells-Info.plist
+cCpResource build/Debug-iphonesimulator/Winterbells.app/Shader.fsh Shaders/Shader.fsh
+cCpResource build/Debug-iphonesimulator/Winterbells.app/Shader.vsh Shaders/Shader.vsh
+cCompileXIB /Users/keith/iPhone/Projects/Winterbells/MainWindow.xib
+cProcessPCH /var/folders/2m/2mw70tVfGc4sTLU-p+u0pk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Winterbells_Prefix-eenspzrqcocudpanvcrdzuyzvvms/Winterbells_Prefix.pch.gch Winterbells_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Winterbells.build/Debug-iphonesimulator/Winterbells.build/Objects-normal/i386/main.o /Users/keith/iPhone/Projects/Winterbells/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Winterbells.build/Debug-iphonesimulator/Winterbells.build/Objects-normal/i386/WinterbellsAppDelegate.o /Users/keith/iPhone/Projects/Winterbells/Classes/WinterbellsAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Winterbells.build/Debug-iphonesimulator/Winterbells.build/Objects-normal/i386/EAGLView.o /Users/keith/iPhone/Projects/Winterbells/Classes/EAGLView.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Winterbells.build/Debug-iphonesimulator/Winterbells.build/Objects-normal/i386/ES1Renderer.o /Users/keith/iPhone/Projects/Winterbells/Classes/ES1Renderer.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Winterbells.build/Debug-iphonesimulator/Winterbells.build/Objects-normal/i386/ES2Renderer.o /Users/keith/iPhone/Projects/Winterbells/Classes/ES2Renderer.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cLd /Users/keith/iPhone/Projects/Winterbells/build/Debug-iphonesimulator/Winterbells.app/Winterbells normal i386
+cGenerateDSYMFile /Users/keith/iPhone/Projects/Winterbells/build/Debug-iphonesimulator/Winterbells.app.dSYM /Users/keith/iPhone/Projects/Winterbells/build/Debug-iphonesimulator/Winterbells.app/Winterbells
+cTouch /Users/keith/iPhone/Projects/Winterbells/build/Debug-iphonesimulator/Winterbells.app
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk
+c000000004B73C4960000000000000110
+t1265878166
+s272
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c000000004B6BA6030000000000288B20
+t1265346051
+s2657056
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
+c000000004B6BA5F60000000000001355
+t1265346038
+s4949
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/EAGL.h
+c000000004B6BB1FC000000000000094F
+t1265349116
+s2383
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/EAGLDrawable.h
+c000000004B6BB1FC0000000000000A61
+t1265349116
+s2657
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/ES1/gl.h
+c000000004B6BB1FC0000000000009369
+t1265349116
+s37737
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/ES1/glext.h
+c000000004B6BB1FC0000000000002A42
+t1265349116
+s10818
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/ES2/gl.h
+c000000004B6BB1FC00000000000082AD
+t1265349116
+s33453
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/ES2/glext.h
+c000000004B6BB1FC0000000000001617
+t1265349116
+s5655
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk/System/Library/Frameworks/OpenGLES.framework/OpenGLES
+c000000004B6BB207000000000001F9F0
+t1265349127
+s129520
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.h
+c000000004B6BB235000000000000007D
+t1265349173
+s125
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk/System/Library/Frameworks/QuartzCore.framework/QuartzCore
+c000000004B6BB35D000000000011BDC0
+t1265349469
+s1162688
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
+c000000004B6BC0FA000000000000098F
+t1265352954
+s2447
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c000000004B6BC203000000000211A810
+t1265353219
+s34711568
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk/usr/include/Availability.h
+c000000004B63D0A90000000000001A1A
+t1264832681
+s6682
+
+N/Users/keith/iPhone/Projects/Winterbells/Classes/EAGLView.h
+c000000004B7FBCC300000000000004D9
+t1266662595
+s1241
+i<UIKit/UIKit.h>
+i<QuartzCore/QuartzCore.h>
+i"ESRenderer.h"
+
+N/Users/keith/iPhone/Projects/Winterbells/Classes/EAGLView.m
+c000000004B7FBCC30000000000001012
+t1266662595
+s4114
+i"EAGLView.h"
+i"ES1Renderer.h"
+i"ES2Renderer.h"
+
+N/Users/keith/iPhone/Projects/Winterbells/Classes/ES1Renderer.h
+c000000004B7FBCC30000000000000265
+t1266662595
+s613
+i"ESRenderer.h"
+i<OpenGLES/ES1/gl.h>
+i<OpenGLES/ES1/glext.h>
+
+N/Users/keith/iPhone/Projects/Winterbells/Classes/ES1Renderer.m
+c000000004B7FBCC30000000000000F9F
+t1266662595
+s3999
+i"ES1Renderer.h"
+
+N/Users/keith/iPhone/Projects/Winterbells/Classes/ES2Renderer.h
+c000000004B7FBCC3000000000000027B
+t1266662595
+s635
+i"ESRenderer.h"
+i<OpenGLES/ES2/gl.h>
+i<OpenGLES/ES2/glext.h>
+
+N/Users/keith/iPhone/Projects/Winterbells/Classes/ES2Renderer.m
+c000000004B7FBCC30000000000002206
+t1266662595
+s8710
+i"ES2Renderer.h"
+
+N/Users/keith/iPhone/Projects/Winterbells/Classes/ESRenderer.h
+c000000004B7FBCC3000000000000014A
+t1266662595
+s330
+i<QuartzCore/QuartzCore.h>
+i<OpenGLES/EAGL.h>
+i<OpenGLES/EAGLDrawable.h>
+
+N/Users/keith/iPhone/Projects/Winterbells/Classes/WinterbellsAppDelegate.h
+c000000004B7FBCC300000000000001AB
+t1266662595
+s427
+i<UIKit/UIKit.h>
+
+N/Users/keith/iPhone/Projects/Winterbells/Classes/WinterbellsAppDelegate.m
+c000000004B7FBCC30000000000000339
+t1266662595
+s825
+i"WinterbellsAppDelegate.h"
+i"EAGLView.h"
+
+N/Users/keith/iPhone/Projects/Winterbells/MainWindow.xib
+c000000004B7FBCC30000000000002780
+t1266662595
+s10112
+
+N/Users/keith/iPhone/Projects/Winterbells/Shaders/Shader.fsh
+c000000004B7FBCC300000000000000D5
+t1266662595
+s213
+
+N/Users/keith/iPhone/Projects/Winterbells/Shaders/Shader.vsh
+c000000004B7FBCC3000000000000015B
+t1266662595
+s347
+
+N/Users/keith/iPhone/Projects/Winterbells/Winterbells_Prefix.pch
+c000000004B7FBCC30000000000000140
+t1266662595
+s320
+i<Availability.h>
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/keith/iPhone/Projects/Winterbells/build/Debug-iphonesimulator/Winterbells.app
+t1266663163
+s272
+
+N/Users/keith/iPhone/Projects/Winterbells/build/Debug-iphonesimulator/Winterbells.app.dSYM
+t1266663162
+s102
+
+N/Users/keith/iPhone/Projects/Winterbells/build/Debug-iphonesimulator/Winterbells.app/Info.plist
+t1266663160
+s607
+
+N/Users/keith/iPhone/Projects/Winterbells/build/Debug-iphonesimulator/Winterbells.app/MainWindow.nib
+t1266663160
+s1177
+
+N/Users/keith/iPhone/Projects/Winterbells/build/Debug-iphonesimulator/Winterbells.app/PkgInfo
+t1266663160
+s8
+
+N/Users/keith/iPhone/Projects/Winterbells/build/Debug-iphonesimulator/Winterbells.app/Shader.fsh
+t1266663160
+s213
+
+N/Users/keith/iPhone/Projects/Winterbells/build/Debug-iphonesimulator/Winterbells.app/Shader.vsh
+t1266663160
+s347
+
+N/Users/keith/iPhone/Projects/Winterbells/build/Debug-iphonesimulator/Winterbells.app/Winterbells
+t1266663162
+s35452
+
+N/Users/keith/iPhone/Projects/Winterbells/build/Winterbells.build/Debug-iphonesimulator/Winterbells.build/Objects-normal/i386/EAGLView.o
+t1266663162
+s19388
+
+N/Users/keith/iPhone/Projects/Winterbells/build/Winterbells.build/Debug-iphonesimulator/Winterbells.build/Objects-normal/i386/ES1Renderer.o
+t1266663162
+s14860
+
+N/Users/keith/iPhone/Projects/Winterbells/build/Winterbells.build/Debug-iphonesimulator/Winterbells.build/Objects-normal/i386/ES2Renderer.o
+t1266663162
+s21860
+
+N/Users/keith/iPhone/Projects/Winterbells/build/Winterbells.build/Debug-iphonesimulator/Winterbells.build/Objects-normal/i386/Winterbells.LinkFileList
+c000000004B7FBEF800000000000002B8
+t1266663160
+s696
+
+N/Users/keith/iPhone/Projects/Winterbells/build/Winterbells.build/Debug-iphonesimulator/Winterbells.build/Objects-normal/i386/WinterbellsAppDelegate.o
+t1266663162
+s20964
+
+N/Users/keith/iPhone/Projects/Winterbells/build/Winterbells.build/Debug-iphonesimulator/Winterbells.build/Objects-normal/i386/main.o
+t1266663162
+s5948
+
+N/Users/keith/iPhone/Projects/Winterbells/main.m
+c000000004B7FBCC30000000000000164
+t1266662595
+s356
+i<UIKit/UIKit.h>
+
+N/var/folders/2m/2mw70tVfGc4sTLU-p+u0pk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Winterbells_Prefix-eenspzrqcocudpanvcrdzuyzvvms/Winterbells_Prefix.pch.gch
+t1266663162
+s13748080
+
+NWinterbells-Info.plist
+c000000004B7FBCC3000000000000038D
+t1266662595
+s909
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies288355960#288355960#0(0"0(0#1#0"31244212048494624#0"0#
+
+CCompileC build/Winterbells.build/Debug-iphonesimulator/Winterbells.build/Objects-normal/i386/EAGLView.o /Users/keith/iPhone/Projects/Winterbells/Classes/EAGLView.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s288355962.352439
+e288355962.469122
+r1
+xCompileC
+xbuild/Winterbells.build/Debug-iphonesimulator/Winterbells.build/Objects-normal/i386/EAGLView.o
+x/Users/keith/iPhone/Projects/Winterbells/Classes/EAGLView.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@67"Compile /Users/keith/iPhone/Projects/Winterbells/Classes/EAGLView.m288355962#288355962#0(0"0(0#0#59"/Users/keith/iPhone/Projects/Winterbells/Classes/EAGLView.m4300907768#1983"    cd /Users/keith/iPhone/Projects/Winterbells    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/keith/iPhone/Projects/Winterbells/build/Winterbells.build/Debug-iphonesimulator/Winterbells.build/Winterbells-generated-files.hmap -I/Users/keith/iPhone/Projects/Winterbells/build/Winterbells.build/Debug-iphonesimulator/Winterbells.build/Winterbells-own-target-headers.hmap -I/Users/keith/iPhone/Projects/Winterbells/build/Winterbells.build/Debug-iphonesimulator/Winterbells.build/Winterbells-all-target-headers.hmap -iquote /Users/keith/iPhone/Projects/Winterbells/build/Winterbells.build/Debug-iphonesimulator/Winterbells.build/Winterbells-project-headers.hmap -F/Users/keith/iPhone/Projects/Winterbells/build/Debug-iphonesimulator -I/Users/keith/iPhone/Projects/Winterbells/build/Debug-iphonesimulator/include -I/Users/keith/iPhone/Projects/Winterbells/build/Winterbells.build/Debug-iphonesimulator/Winterbells.build/DerivedSources/i386 -I/Users/keith/iPhone/Projects/Winterbells/build/Winterbells.build/Debug-iphonesimulator/Winterbells.build/DerivedSources -include /var/folders/2m/2mw70tVfGc4sTLU-p+u0pk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Winterbells_Prefix-eenspzrqcocudpanvcrdzuyzvvms/Winterbells_Prefix.pch -c /Users/keith/iPhone/Projects/Winterbells/Classes/EAGLView.m -o /Users/keith/iPhone/Projects/Winterbells/build/Winterbells.build/Debug-iphonesimulator/Winterbells.build/Objects-normal/i386/EAGLView.o0#
+
+CCompileC build/Winterbells.build/Debug-iphonesimulator/Winterbells.build/Objects-normal/i386/ES1Renderer.o /Users/keith/iPhone/Projects/Winterbells/Classes/ES1Renderer.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s288355962.353648
+e288355962.436579
+r1
+xCompileC
+xbuild/Winterbells.build/Debug-iphonesimulator/Winterbells.build/Objects-normal/i386/ES1Renderer.o
+x/Users/keith/iPhone/Projects/Winterbells/Classes/ES1Renderer.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@70"Compile /Users/keith/iPhone/Projects/Winterbells/Classes/ES1Renderer.m288355962#288355962#0(0"0(0#0#62"/Users/keith/iPhone/Projects/Winterbells/Classes/ES1Renderer.m4300907768#1989"    cd /Users/keith/iPhone/Projects/Winterbells    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/keith/iPhone/Projects/Winterbells/build/Winterbells.build/Debug-iphonesimulator/Winterbells.build/Winterbells-generated-files.hmap -I/Users/keith/iPhone/Projects/Winterbells/build/Winterbells.build/Debug-iphonesimulator/Winterbells.build/Winterbells-own-target-headers.hmap -I/Users/keith/iPhone/Projects/Winterbells/build/Winterbells.build/Debug-iphonesimulator/Winterbells.build/Winterbells-all-target-headers.hmap -iquote /Users/keith/iPhone/Projects/Winterbells/build/Winterbells.build/Debug-iphonesimulator/Winterbells.build/Winterbells-project-headers.hmap -F/Users/keith/iPhone/Projects/Winterbells/build/Debug-iphonesimulator -I/Users/keith/iPhone/Projects/Winterbells/build/Debug-iphonesimulator/include -I/Users/keith/iPhone/Projects/Winterbells/build/Winterbells.build/Debug-iphonesimulator/Winterbells.build/DerivedSources/i386 -I/Users/keith/iPhone/Projects/Winterbells/build/Winterbells.build/Debug-iphonesimulator/Winterbells.build/DerivedSources -include /var/folders/2m/2mw70tVfGc4sTLU-p+u0pk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Winterbells_Prefix-eenspzrqcocudpanvcrdzuyzvvms/Winterbells_Prefix.pch -c /Users/keith/iPhone/Projects/Winterbells/Classes/ES1Renderer.m -o /Users/keith/iPhone/Projects/Winterbells/build/Winterbells.build/Debug-iphonesimulator/Winterbells.build/Objects-normal/i386/ES1Renderer.o0#
+
+CCompileC build/Winterbells.build/Debug-iphonesimulator/Winterbells.build/Objects-normal/i386/ES2Renderer.o /Users/keith/iPhone/Projects/Winterbells/Classes/ES2Renderer.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s288355962.436685
+e288355962.537668
+r1
+xCompileC
+xbuild/Winterbells.build/Debug-iphonesimulator/Winterbells.build/Objects-normal/i386/ES2Renderer.o
+x/Users/keith/iPhone/Projects/Winterbells/Classes/ES2Renderer.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@70"Compile /Users/keith/iPhone/Projects/Winterbells/Classes/ES2Renderer.m288355962#288355962#0(0"0(0#0#62"/Users/keith/iPhone/Projects/Winterbells/Classes/ES2Renderer.m4300907768#1989"    cd /Users/keith/iPhone/Projects/Winterbells    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/keith/iPhone/Projects/Winterbells/build/Winterbells.build/Debug-iphonesimulator/Winterbells.build/Winterbells-generated-files.hmap -I/Users/keith/iPhone/Projects/Winterbells/build/Winterbells.build/Debug-iphonesimulator/Winterbells.build/Winterbells-own-target-headers.hmap -I/Users/keith/iPhone/Projects/Winterbells/build/Winterbells.build/Debug-iphonesimulator/Winterbells.build/Winterbells-all-target-headers.hmap -iquote /Users/keith/iPhone/Projects/Winterbells/build/Winterbells.build/Debug-iphonesimulator/Winterbells.build/Winterbells-project-headers.hmap -F/Users/keith/iPhone/Projects/Winterbells/build/Debug-iphonesimulator -I/Users/keith/iPhone/Projects/Winterbells/build/Debug-iphonesimulator/include -I/Users/keith/iPhone/Projects/Winterbells/build/Winterbells.build/Debug-iphonesimulator/Winterbells.build/DerivedSources/i386 -I/Users/keith/iPhone/Projects/Winterbells/build/Winterbells.build/Debug-iphonesimulator/Winterbells.build/DerivedSources -include /var/folders/2m/2mw70tVfGc4sTLU-p+u0pk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Winterbells_Prefix-eenspzrqcocudpanvcrdzuyzvvms/Winterbells_Prefix.pch -c /Users/keith/iPhone/Projects/Winterbells/Classes/ES2Renderer.m -o /Users/keith/iPhone/Projects/Winterbells/build/Winterbells.build/Debug-iphonesimulator/Winterbells.build/Objects-normal/i386/ES2Renderer.o0#
+
+CCompileC build/Winterbells.build/Debug-iphonesimulator/Winterbells.build/Objects-normal/i386/WinterbellsAppDelegate.o /Users/keith/iPhone/Projects/Winterbells/Classes/WinterbellsAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s288355962.124398
+e288355962.352333
+r1
+xCompileC
+xbuild/Winterbells.build/Debug-iphonesimulator/Winterbells.build/Objects-normal/i386/WinterbellsAppDelegate.o
+x/Users/keith/iPhone/Projects/Winterbells/Classes/WinterbellsAppDelegate.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@81"Compile /Users/keith/iPhone/Projects/Winterbells/Classes/WinterbellsAppDelegate.m288355962#288355962#0(0"0(0#0#73"/Users/keith/iPhone/Projects/Winterbells/Classes/WinterbellsAppDelegate.m4300907768#2011"    cd /Users/keith/iPhone/Projects/Winterbells    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/keith/iPhone/Projects/Winterbells/build/Winterbells.build/Debug-iphonesimulator/Winterbells.build/Winterbells-generated-files.hmap -I/Users/keith/iPhone/Projects/Winterbells/build/Winterbells.build/Debug-iphonesimulator/Winterbells.build/Winterbells-own-target-headers.hmap -I/Users/keith/iPhone/Projects/Winterbells/build/Winterbells.build/Debug-iphonesimulator/Winterbells.build/Winterbells-all-target-headers.hmap -iquote /Users/keith/iPhone/Projects/Winterbells/build/Winterbells.build/Debug-iphonesimulator/Winterbells.build/Winterbells-project-headers.hmap -F/Users/keith/iPhone/Projects/Winterbells/build/Debug-iphonesimulator -I/Users/keith/iPhone/Projects/Winterbells/build/Debug-iphonesimulator/include -I/Users/keith/iPhone/Projects/Winterbells/build/Winterbells.build/Debug-iphonesimulator/Winterbells.build/DerivedSources/i386 -I/Users/keith/iPhone/Projects/Winterbells/build/Winterbells.build/Debug-iphonesimulator/Winterbells.build/DerivedSources -include /var/folders/2m/2mw70tVfGc4sTLU-p+u0pk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Winterbells_Prefix-eenspzrqcocudpanvcrdzuyzvvms/Winterbells_Prefix.pch -c /Users/keith/iPhone/Projects/Winterbells/Classes/WinterbellsAppDelegate.m -o /Users/keith/iPhone/Projects/Winterbells/build/Winterbells.build/Debug-iphonesimulator/Winterbells.build/Objects-normal/i386/WinterbellsAppDelegate.o0#
+
+CCompileC build/Winterbells.build/Debug-iphonesimulator/Winterbells.build/Objects-normal/i386/main.o /Users/keith/iPhone/Projects/Winterbells/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s288355962.122799
+e288355962.353574
+r1
+xCompileC
+xbuild/Winterbells.build/Debug-iphonesimulator/Winterbells.build/Objects-normal/i386/main.o
+x/Users/keith/iPhone/Projects/Winterbells/main.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@55"Compile /Users/keith/iPhone/Projects/Winterbells/main.m288355962#288355962#0(0"0(0#0#47"/Users/keith/iPhone/Projects/Winterbells/main.m4300907768#1967"    cd /Users/keith/iPhone/Projects/Winterbells    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/keith/iPhone/Projects/Winterbells/build/Winterbells.build/Debug-iphonesimulator/Winterbells.build/Winterbells-generated-files.hmap -I/Users/keith/iPhone/Projects/Winterbells/build/Winterbells.build/Debug-iphonesimulator/Winterbells.build/Winterbells-own-target-headers.hmap -I/Users/keith/iPhone/Projects/Winterbells/build/Winterbells.build/Debug-iphonesimulator/Winterbells.build/Winterbells-all-target-headers.hmap -iquote /Users/keith/iPhone/Projects/Winterbells/build/Winterbells.build/Debug-iphonesimulator/Winterbells.build/Winterbells-project-headers.hmap -F/Users/keith/iPhone/Projects/Winterbells/build/Debug-iphonesimulator -I/Users/keith/iPhone/Projects/Winterbells/build/Debug-iphonesimulator/include -I/Users/keith/iPhone/Projects/Winterbells/build/Winterbells.build/Debug-iphonesimulator/Winterbells.build/DerivedSources/i386 -I/Users/keith/iPhone/Projects/Winterbells/build/Winterbells.build/Debug-iphonesimulator/Winterbells.build/DerivedSources -include /var/folders/2m/2mw70tVfGc4sTLU-p+u0pk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Winterbells_Prefix-eenspzrqcocudpanvcrdzuyzvvms/Winterbells_Prefix.pch -c /Users/keith/iPhone/Projects/Winterbells/main.m -o /Users/keith/iPhone/Projects/Winterbells/build/Winterbells.build/Debug-iphonesimulator/Winterbells.build/Objects-normal/i386/main.o0#
+
+CCompileXIB /Users/keith/iPhone/Projects/Winterbells/MainWindow.xib
+s288355960.403387
+e288355960.845366
+r1
+xCompileXIB
+x/Users/keith/iPhone/Projects/Winterbells/MainWindow.xib
+lSLF07#2@25"CompileXIB MainWindow.xib288355960#288355960#0(0"0(0#0#55"/Users/keith/iPhone/Projects/Winterbells/MainWindow.xib4300907768#490"    cd /Users/keith/iPhone/Projects/Winterbells    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 3.2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/keith/iPhone/Projects/Winterbells/build/Debug-iphonesimulator/Winterbells.app/MainWindow.nib /Users/keith/iPhone/Projects/Winterbells/MainWindow.xib0#
+
+CCpResource build/Debug-iphonesimulator/Winterbells.app/Shader.fsh Shaders/Shader.fsh
+s288355960.400064
+e288355960.450453
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/Winterbells.app/Shader.fsh
+xShaders/Shader.fsh
+lSLF07#2@23"Copy Shaders/Shader.fsh288355960#288355960#0(0"0(0#0#59"/Users/keith/iPhone/Projects/Winterbells/Shaders/Shader.fsh30962724186357872#472"    cd /Users/keith/iPhone/Projects/Winterbells    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/keith/iPhone/Projects/Winterbells/Shaders/Shader.fsh /Users/keith/iPhone/Projects/Winterbells/build/Debug-iphonesimulator/Winterbells.app0#
+
+CCpResource build/Debug-iphonesimulator/Winterbells.app/Shader.vsh Shaders/Shader.vsh
+s288355960.402442
+e288355960.451133
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/Winterbells.app/Shader.vsh
+xShaders/Shader.vsh
+lSLF07#2@23"Copy Shaders/Shader.vsh288355960#288355960#0(0"0(0#0#59"/Users/keith/iPhone/Projects/Winterbells/Shaders/Shader.vsh4300907768#472"    cd /Users/keith/iPhone/Projects/Winterbells    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/keith/iPhone/Projects/Winterbells/Shaders/Shader.vsh /Users/keith/iPhone/Projects/Winterbells/build/Debug-iphonesimulator/Winterbells.app0#
+
+CGenerateDSYMFile /Users/keith/iPhone/Projects/Winterbells/build/Debug-iphonesimulator/Winterbells.app.dSYM /Users/keith/iPhone/Projects/Winterbells/build/Debug-iphonesimulator/Winterbells.app/Winterbells
+s288355962.899619
+e288355962.970390
+r1
+xGenerateDSYMFile
+x/Users/keith/iPhone/Projects/Winterbells/build/Debug-iphonesimulator/Winterbells.app.dSYM
+x/Users/keith/iPhone/Projects/Winterbells/build/Debug-iphonesimulator/Winterbells.app/Winterbells
+lSLF07#2@121"GenerateDSYMFile build/Debug-iphonesimulator/Winterbells.app.dSYM build/Debug-iphonesimulator/Winterbells.app/Winterbells288355962#288355962#0(0"0(0#0#96"/Users/keith/iPhone/Projects/Winterbells/build/Debug-iphonesimulator/Winterbells.app/Winterbells4300907768#401"    cd /Users/keith/iPhone/Projects/Winterbells    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/keith/iPhone/Projects/Winterbells/build/Debug-iphonesimulator/Winterbells.app/Winterbells -o /Users/keith/iPhone/Projects/Winterbells/build/Debug-iphonesimulator/Winterbells.app.dSYM0#
+
+CLd /Users/keith/iPhone/Projects/Winterbells/build/Debug-iphonesimulator/Winterbells.app/Winterbells normal i386
+s288355962.537765
+e288355962.899486
+r1
+xLd
+x/Users/keith/iPhone/Projects/Winterbells/build/Debug-iphonesimulator/Winterbells.app/Winterbells
+xnormal
+xi386
+lSLF07#2@101"Link /Users/keith/iPhone/Projects/Winterbells/build/Debug-iphonesimulator/Winterbells.app/Winterbells288355962#288355962#0(0"0(0#0#0"4300907768#910"    cd /Users/keith/iPhone/Projects/Winterbells    setenv MACOSX_DEPLOYMENT_TARGET 10.5    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -L/Users/keith/iPhone/Projects/Winterbells/build/Debug-iphonesimulator -F/Users/keith/iPhone/Projects/Winterbells/build/Debug-iphonesimulator -filelist /Users/keith/iPhone/Projects/Winterbells/build/Winterbells.build/Debug-iphonesimulator/Winterbells.build/Objects-normal/i386/Winterbells.LinkFileList -mmacosx-version-min=10.5 -framework Foundation -framework UIKit -framework OpenGLES -framework QuartzCore -o /Users/keith/iPhone/Projects/Winterbells/build/Debug-iphonesimulator/Winterbells.app/Winterbells0#
+
+CProcessInfoPlistFile /Users/keith/iPhone/Projects/Winterbells/build/Debug-iphonesimulator/Winterbells.app/Info.plist Winterbells-Info.plist
+s288355960.362945
+e288355960.399894
+r1
+xProcessInfoPlistFile
+x/Users/keith/iPhone/Projects/Winterbells/build/Debug-iphonesimulator/Winterbells.app/Info.plist
+xWinterbells-Info.plist
+lSLF07#2@30"Process Winterbells-Info.plist288355960#288355960#0(0"0(0#0#63"/Users/keith/iPhone/Projects/Winterbells/Winterbells-Info.plist32932993188560964#497"    cd /Users/keith/iPhone/Projects/Winterbells    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility Winterbells-Info.plist -genpkginfo /Users/keith/iPhone/Projects/Winterbells/build/Debug-iphonesimulator/Winterbells.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Users/keith/iPhone/Projects/Winterbells/build/Debug-iphonesimulator/Winterbells.app/Info.plist0#
+
+CProcessPCH /var/folders/2m/2mw70tVfGc4sTLU-p+u0pk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Winterbells_Prefix-eenspzrqcocudpanvcrdzuyzvvms/Winterbells_Prefix.pch.gch Winterbells_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+s288355960.845617
+e288355962.122537
+r1
+xProcessPCH
+x/var/folders/2m/2mw70tVfGc4sTLU-p+u0pk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Winterbells_Prefix-eenspzrqcocudpanvcrdzuyzvvms/Winterbells_Prefix.pch.gch
+xWinterbells_Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@33"Precompile Winterbells_Prefix.pch288355960#288355962#0(0"0(0#0#63"/Users/keith/iPhone/Projects/Winterbells/Winterbells_Prefix.pch4300907768#1853"    cd /Users/keith/iPhone/Projects/Winterbells    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/keith/iPhone/Projects/Winterbells/build/Winterbells.build/Debug-iphonesimulator/Winterbells.build/Winterbells-generated-files.hmap -I/Users/keith/iPhone/Projects/Winterbells/build/Winterbells.build/Debug-iphonesimulator/Winterbells.build/Winterbells-own-target-headers.hmap -I/Users/keith/iPhone/Projects/Winterbells/build/Winterbells.build/Debug-iphonesimulator/Winterbells.build/Winterbells-all-target-headers.hmap -iquote /Users/keith/iPhone/Projects/Winterbells/build/Winterbells.build/Debug-iphonesimulator/Winterbells.build/Winterbells-project-headers.hmap -F/Users/keith/iPhone/Projects/Winterbells/build/Debug-iphonesimulator -I/Users/keith/iPhone/Projects/Winterbells/build/Debug-iphonesimulator/include -I/Users/keith/iPhone/Projects/Winterbells/build/Winterbells.build/Debug-iphonesimulator/Winterbells.build/DerivedSources/i386 -I/Users/keith/iPhone/Projects/Winterbells/build/Winterbells.build/Debug-iphonesimulator/Winterbells.build/DerivedSources -c /Users/keith/iPhone/Projects/Winterbells/Winterbells_Prefix.pch -o /var/folders/2m/2mw70tVfGc4sTLU-p+u0pk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Winterbells_Prefix-eenspzrqcocudpanvcrdzuyzvvms/Winterbells_Prefix.pch.gch0#
+
+CTouch /Users/keith/iPhone/Projects/Winterbells/build/Debug-iphonesimulator/Winterbells.app
+s288355962.970479
+e288355963.007188
+r1
+xTouch
+x/Users/keith/iPhone/Projects/Winterbells/build/Debug-iphonesimulator/Winterbells.app
+lSLF07#2@90"Touch /Users/keith/iPhone/Projects/Winterbells/build/Debug-iphonesimulator/Winterbells.app288355962#288355963#0(0"0(0#0#0"4300907768#286"    cd /Users/keith/iPhone/Projects/Winterbells    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/keith/iPhone/Projects/Winterbells/build/Debug-iphonesimulator/Winterbells.app0#
+
