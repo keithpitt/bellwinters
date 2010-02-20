@@ -6,9 +6,9 @@
 //  Copyright Apple Inc 2010. All rights reserved.
 //
 
-#import "ES1Renderer.h"
+#import "ESRenderer.h"
 
-@implementation ES1Renderer
+@implementation ESRenderer
 
 // Create an OpenGL ES 1.1 context
 - (id)init
