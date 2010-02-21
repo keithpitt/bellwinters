@@ -15,8 +15,12 @@
 #import <OpenGLES/EAGLDrawable.h>
 #import <OpenGLES/ES1/gl.h>
 #import <OpenGLES/ES1/glext.h>
+#import "World.h"
+#import "Player.h"
 
-@interface ESRenderer : NSObject <UIApplicationDelegate>
+#import "AccelerometerSimulation.h"
+
+@interface ESRenderer : NSObject <UIApplicationDelegate, UIAccelerometerDelegate>
 {
 @private
     EAGLContext *context;
@@ -24,13 +28,15 @@
     // The pixel dimensions of the CAEAGLLayer
     GLint backingWidth;
     GLint backingHeight;
-    
-    CFTimeInterval lastTime;
+				CFTimeInterval lastTime;
     
     // The OpenGL ES names for the framebuffer and renderbuffer used to render to this view
     GLuint defaultFramebuffer, colorRenderbuffer;
+				
+				UIAccelerometer * accelerometer;
     
-    Texture2D * bunnyRabbit;
+				Player * player;
+				World * world;
     
 }
 

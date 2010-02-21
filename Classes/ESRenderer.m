@@ -8,13 +8,6 @@
 
 #import "ESRenderer.h"
 
-@interface ESRenderer()
-
--(void)updateScene:(float)delta;
--(void)renderScene;
-
-@end
-
 @implementation ESRenderer
 
 // Create an OpenGL ES 1.1 context
@@ -56,11 +49,18 @@
         glBindRenderbufferOES(GL_RENDERBUFFER_OES, colorRenderbuffer);
         glFramebufferRenderbufferOES(GL_FRAMEBUFFER_OES, GL_COLOR_ATTACHMENT0_OES, GL_RENDERBUFFER_OES, colorRenderbuffer);
         
-        // Init the Trollface image
-        bunnyRabbit = [[Texture2D alloc] initWithImage:[UIImage imageNamed:@"Bunny.png"]];
-        
-        lastTime = CFAbsoluteTimeGetCurrent();
-        
+								// Initialize the accelerometer
+								accelerometer = [UIAccelerometer sharedAccelerometer];
+								accelerometer.updateInterval = .1;
+								accelerometer.delegate = self;
+								
+        world = [[World alloc] init];
+								player = [[Player alloc] init];
+								
+								[world registerEntity:player];
+								
+								lastTime = CFAbsoluteTimeGetCurrent();
+								
     }
     
     return self;
@@ -73,21 +73,9 @@
     time = CFAbsoluteTimeGetCurrent();
     delta = (time - lastTime) / (1.0f/60.0f);
     
-    [self updateScene:delta];	
-    [self renderScene];	
+    [world update:delta];	
     
-    lastTime = time;
-}
-
-- (void)updateScene:(float)delta
-{
-    // Update game logic.
-}
-
-- (void)renderScene
-{
-    
-    // This application only creates a single context which is already set current at this point.
+				// This application only creates a single context which is already set current at this point.
     // This call is redundant, but needed if dealing with multiple contexts.
     [EAGLContext setCurrentContext:context];
     
@@ -97,13 +85,20 @@
     glViewport(0, 0, backingWidth, backingHeight);
     
     glClear(GL_COLOR_BUFFER_BIT);
-    
-    [bunnyRabbit drawAtPoint:CGPointMake(120, 270)];
+				
+				[world render];
     
     // This application only creates a single color renderbuffer which is already bound at this point.
     // This call is redundant, but needed if dealing with multiple renderbuffers.
     glBindRenderbufferOES(GL_RENDERBUFFER_OES, colorRenderbuffer);
     [context presentRenderbuffer:GL_RENDERBUFFER_OES];
+    
+    lastTime = time;
+				
+}
+
+- (void)accelerometer:(UIAccelerometer *)accelerometer didAccelerate:(UIAcceleration *)acceleration {
+				[world handleAccelerometer:acceleration];
 }
 
 - (BOOL)resizeFromLayer:(CAEAGLLayer *)layer
@@ -142,7 +137,7 @@
     if ([EAGLContext currentContext] == context)
         [EAGLContext setCurrentContext:nil];
     
-    [bunnyRabbit release];
+    [world release];
     
     [context release];
     context = nil;

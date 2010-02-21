@@ -60,14 +60,15 @@ Copyright (C) 2008 Apple Inc. All Rights Reserved.
 
 @synthesize contentSize=_size, pixelFormat=_format, pixelsWide=_width, pixelsHigh=_height, name=_name, maxS=_maxS, maxT=_maxT;
 
-- (id) initWithData:(const void*)data pixelFormat:(Texture2DPixelFormat)pixelFormat pixelsWide:(NSUInteger)width pixelsHigh:(NSUInteger)height contentSize:(CGSize)size
+- (id) initWithData:(const void*)data pixelFormat:(Texture2DPixelFormat)pixelFormat pixelsWide:(NSUInteger)width pixelsHigh:(NSUInteger)height contentSize:(CGSize)size filter:(GLenum)filter
 {
 	GLint					saveName;
 	if((self = [super init])) {
 		glGenTextures(1, &_name);
 		glGetIntegerv(GL_TEXTURE_BINDING_2D, &saveName);
 		glBindTexture(GL_TEXTURE_2D, _name);
-		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, filter);
+		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, filter);
 		switch(pixelFormat) {
 			
 			case kTexture2DPixelFormat_RGBA8888:
@@ -112,7 +113,7 @@ Copyright (C) 2008 Apple Inc. All Rights Reserved.
 
 @implementation Texture2D (Image)
 	
-- (id) initWithImage:(UIImage *)uiImage
+- (id) initWithImage:(UIImage *)uiImage filter:(GLenum)filter
 {
 	NSUInteger				width,
 							height,
@@ -220,7 +221,7 @@ Copyright (C) 2008 Apple Inc. All Rights Reserved.
 		data = tempData;
 		
 	}
-	self = [self initWithData:data pixelFormat:pixelFormat pixelsWide:width pixelsHigh:height contentSize:imageSize];
+	self = [self initWithData:data pixelFormat:pixelFormat pixelsWide:width pixelsHigh:height contentSize:imageSize filter:filter];
 	
 	CGContextRelease(context);
 	free(data);
@@ -272,7 +273,7 @@ Copyright (C) 2008 Apple Inc. All Rights Reserved.
 		[string drawInRect:CGRectMake(0, 0, dimensions.width, dimensions.height) withFont:font lineBreakMode:UILineBreakModeWordWrap alignment:alignment];
 	UIGraphicsPopContext();
 	
-	self = [self initWithData:data pixelFormat:kTexture2DPixelFormat_A8 pixelsWide:width pixelsHigh:height contentSize:dimensions];
+	self = [self initWithData:data pixelFormat:kTexture2DPixelFormat_A8 pixelsWide:width pixelsHigh:height contentSize:dimensions filter:GL_LINEAR];
 	
 	CGContextRelease(context);
 	free(data);

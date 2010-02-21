@@ -18,7 +18,12 @@
 		28FD14FE0DC6FC130079059D /* EAGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 28FD14FD0DC6FC130079059D /* EAGLView.m */; };
 		28FD15000DC6FC520079059D /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD14FF0DC6FC520079059D /* OpenGLES.framework */; };
 		28FD15080DC6FC5B0079059D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD15070DC6FC5B0079059D /* QuartzCore.framework */; };
-		53944AE311300C2400A3F820 /* Texture2D.m in Sources */ = {isa = PBXBuildFile; fileRef = 53944AE211300C2400A3F820 /* Texture2D.m */; };
+		3B0725431130D5D7000BF7C9 /* World.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0725421130D5D7000BF7C9 /* World.m */; };
+		3B0725481130D5FB000BF7C9 /* Entity.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0725471130D5FB000BF7C9 /* Entity.m */; };
+		3B07254C1130D6F0000BF7C9 /* Image.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B07254B1130D6F0000BF7C9 /* Image.m */; };
+		3B07255D1130D7FD000BF7C9 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B07255C1130D7FD000BF7C9 /* Player.m */; };
+		3B0726881130E5A6000BF7C9 /* Texture2D.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0726871130E5A6000BF7C9 /* Texture2D.m */; };
+		3B0727F51130F5E0000BF7C9 /* AccelerometerSimulation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0727F41130F5E0000BF7C9 /* AccelerometerSimulation.m */; };
 		53944B2911300CB700A3F820 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53944B2811300CB700A3F820 /* CoreGraphics.framework */; };
 		53944B581130116500A3F820 /* Bunny.png in Resources */ = {isa = PBXBuildFile; fileRef = 53944B571130116500A3F820 /* Bunny.png */; };
 /* End PBXBuildFile section */
@@ -40,8 +45,18 @@
 		28FD15070DC6FC5B0079059D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* Winterbells_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Winterbells_Prefix.pch; sourceTree = "<group>"; };
-		53944AE111300C2400A3F820 /* Texture2D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Texture2D.h; sourceTree = "<group>"; };
-		53944AE211300C2400A3F820 /* Texture2D.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Texture2D.m; sourceTree = "<group>"; };
+		3B0725411130D5D7000BF7C9 /* World.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = World.h; sourceTree = "<group>"; };
+		3B0725421130D5D7000BF7C9 /* World.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = World.m; sourceTree = "<group>"; };
+		3B0725461130D5FB000BF7C9 /* Entity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Entity.h; sourceTree = "<group>"; };
+		3B0725471130D5FB000BF7C9 /* Entity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Entity.m; sourceTree = "<group>"; };
+		3B07254A1130D6F0000BF7C9 /* Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Image.h; path = Classes/Image.h; sourceTree = "<group>"; };
+		3B07254B1130D6F0000BF7C9 /* Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Image.m; path = Classes/Image.m; sourceTree = "<group>"; };
+		3B07255B1130D7FD000BF7C9 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		3B07255C1130D7FD000BF7C9 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
+		3B0726861130E5A6000BF7C9 /* Texture2D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Texture2D.h; sourceTree = "<group>"; };
+		3B0726871130E5A6000BF7C9 /* Texture2D.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Texture2D.m; sourceTree = "<group>"; };
+		3B0727F31130F5E0000BF7C9 /* AccelerometerSimulation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccelerometerSimulation.h; sourceTree = "<group>"; };
+		3B0727F41130F5E0000BF7C9 /* AccelerometerSimulation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccelerometerSimulation.m; sourceTree = "<group>"; };
 		53944B2811300CB700A3F820 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		53944B571130116500A3F820 /* Bunny.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bunny.png; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Winterbells-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Winterbells-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
@@ -96,6 +111,8 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				3B0725491130D600000BF7C9 /* Engine */,
+				3B0727F21130F5E0000BF7C9 /* Simulator Support */,
 				53944ADB11300C1A00A3F820 /* OpenGL ES Support */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				2514C27610084DB600A42282 /* Shaders */,
@@ -138,11 +155,36 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		3B0725491130D600000BF7C9 /* Engine */ = {
+			isa = PBXGroup;
+			children = (
+				3B0725411130D5D7000BF7C9 /* World.h */,
+				3B0725421130D5D7000BF7C9 /* World.m */,
+				3B0725461130D5FB000BF7C9 /* Entity.h */,
+				3B0725471130D5FB000BF7C9 /* Entity.m */,
+				3B07255B1130D7FD000BF7C9 /* Player.h */,
+				3B07255C1130D7FD000BF7C9 /* Player.m */,
+			);
+			name = Engine;
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		3B0727F21130F5E0000BF7C9 /* Simulator Support */ = {
+			isa = PBXGroup;
+			children = (
+				3B0727F31130F5E0000BF7C9 /* AccelerometerSimulation.h */,
+				3B0727F41130F5E0000BF7C9 /* AccelerometerSimulation.m */,
+			);
+			name = "Simulator Support";
+			sourceTree = "<group>";
+		};
 		53944ADB11300C1A00A3F820 /* OpenGL ES Support */ = {
 			isa = PBXGroup;
 			children = (
-				53944AE111300C2400A3F820 /* Texture2D.h */,
-				53944AE211300C2400A3F820 /* Texture2D.m */,
+				3B0726861130E5A6000BF7C9 /* Texture2D.h */,
+				3B0726871130E5A6000BF7C9 /* Texture2D.m */,
+				3B07254A1130D6F0000BF7C9 /* Image.h */,
+				3B07254B1130D6F0000BF7C9 /* Image.m */,
 			);
 			name = "OpenGL ES Support";
 			sourceTree = "<group>";
@@ -218,7 +260,12 @@
 				1D3623260D0F684500981E51 /* WinterbellsAppDelegate.m in Sources */,
 				28FD14FE0DC6FC130079059D /* EAGLView.m in Sources */,
 				2514C27210084DB100A42282 /* ESRenderer.m in Sources */,
-				53944AE311300C2400A3F820 /* Texture2D.m in Sources */,
+				3B0725431130D5D7000BF7C9 /* World.m in Sources */,
+				3B0725481130D5FB000BF7C9 /* Entity.m in Sources */,
+				3B07254C1130D6F0000BF7C9 /* Image.m in Sources */,
+				3B07255D1130D7FD000BF7C9 /* Player.m in Sources */,
+				3B0726881130E5A6000BF7C9 /* Texture2D.m in Sources */,
+				3B0727F51130F5E0000BF7C9 /* AccelerometerSimulation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
