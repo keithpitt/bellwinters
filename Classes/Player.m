@@ -53,7 +53,14 @@ BOOL grounded;
 
 -(void)handleAcceleration:(UIAcceleration *)acceleration {
 				// Offset the x movement with the accelerometer.
-				movement.x += acceleration.x; 
+//    NSLog(@"%f", acceleration.x);
+    
+    if (!grounded || (acceleration.x > 0.1f || acceleration.x < -0.1f)) {
+        movement.x += (acceleration.x * 6);
+    } else {
+        movement.x = 0;
+    }
+				
 }
 
 -(void)collisionWithWorldX:(float)deltaX Y:(float)deltaY {
