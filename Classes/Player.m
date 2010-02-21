@@ -42,7 +42,9 @@ BOOL grounded;
 				if (position.y > 0) {
 								grounded = false;
 				}
-				
+				if(grounded){
+								movement.y = 0;
+				}
 }
 
 -(void)handleTapAtPoint:(CGPoint)point {
