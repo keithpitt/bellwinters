@@ -58,7 +58,6 @@
 								
 								[world registerEntity:[[Bell alloc] init]];
 								[world registerEntity:[[Bell alloc] init]];
-								[world registerEntity:[[Bell alloc] init]];
 								
 								[world registerEntity:[[Player alloc] init]];
 								

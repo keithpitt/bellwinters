@@ -9,7 +9,10 @@
 #import <Foundation/Foundation.h>
 #import "Image.h"
 
+@class World;
+
 @interface Entity : NSObject {
+				World * world;
 				Image * sprite;
 				CGPoint gravity;
 				CGPoint position;
@@ -17,6 +20,7 @@
 
 @property(nonatomic, readonly)CGPoint			position;
 @property(nonatomic)CGPoint													gravity;
+@property(nonatomic, assign)World							* world;
 
 // Game input
 -(void)handleAcceleration:(UIAcceleration *)acceleration;

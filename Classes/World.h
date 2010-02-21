@@ -14,7 +14,9 @@
 				CGPoint gravity; // m/s^2
 				float windResistance;
 				CGRect bounds;
+				
 				NSMutableArray * entities;
+				NSMutableArray * entitiesToRelease;
 }
 
 // Init methods
@@ -22,6 +24,7 @@
 
 // Entity management
 - (void)registerEntity:(Entity*)entity;
+- (void)unregisterEntity:(Entity*)entity;
 
 // User Input
 - (void)handleAccelerometer:(UIAcceleration *)acceleration;

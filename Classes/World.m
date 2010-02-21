@@ -37,11 +37,17 @@
 				gravity = CGPointMake(0, -0.83);
 				windResistance = 0;
 				entities = [[NSMutableArray alloc] init];
+				entitiesToRelease = [[NSMutableArray alloc] init];
 }
 
 -(void)registerEntity:(Entity*)entity {
 				entity.gravity = gravity;
+				entity.world = self;
 				[entities addObject:entity];
+}
+
+-(void)unregisterEntity:(Entity *)entity {
+				[entitiesToRelease addObject:entity];
 }
 
 - (void)handleTapAtPoint:(CGPoint)point {
@@ -57,13 +63,32 @@
 }
 
 -(void)update:(float)delta {
-				for(Entity * entity in entities){
+				
+				// First release any objects that needed to be relased
+				// from the previous iteration.
+				for (Entity * entity in entitiesToRelease) {
+								[entities removeObject:entity];
+								[entity release];
+				}
+				
+				// Remove all the entites that needed to be cleared.
+				// We should have all our memory back now...
+				[entitiesToRelease removeAllObjects];
+				
+				// Create a temporary clone of the entities array.
+				NSMutableArray * updaters = [[NSMutableArray alloc]initWithArray:entities];
+				
+				for(Entity * entity in updaters){
 								[entity update:delta];
 				}
-				for(Entity * entity in entities){
+				
+				for(Entity * entity in updaters){
 								[self checkBounds:entity];
 								[self checkCollisions:entity];
 				}
+				
+				[updaters release];
+				
 }
 
 -(void)checkBounds:(Entity*)entity{
@@ -115,11 +140,18 @@
 }
 
 -(void)checkCollisions:(Entity *)entity {
-				for(Entity * collider in entities) {
+				
+				// Create a temporary clone of the entities array.
+				NSMutableArray * colliders = [[NSMutableArray alloc]initWithArray:entities];
+				
+				for(Entity * collider in colliders) {
 								if (entity != collider && CGRectIntersectsRect([entity getRect], [collider getRect])) {
 												[entity collisionWith:collider];
 								}
 				}
+				
+				[colliders release];
+				
 }
 
 -(void)render {	

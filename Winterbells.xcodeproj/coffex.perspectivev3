@@ -304,9 +304,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>6</integer>
-									<integer>2</integer>
-									<integer>1</integer>
+									<integer>21</integer>
+									<integer>19</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -346,7 +345,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>3B0725191130D126000BF7C9</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>Bell.m</string>
+								<string>ESRenderer.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -354,11 +353,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>3B07251A1130D126000BF7C9</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>Bell.m</string>
+										<string>ESRenderer.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>3B431D93113129D200C5628D</string>
+										<string>3B431E07113133C800C5628D</string>
 										<key>history</key>
 										<array>
 											<string>3B0728841130FD7C000BF7C9</string>
@@ -368,18 +367,18 @@
 											<string>3B072979113114FB000BF7C9</string>
 											<string>3B07299C1131154D000BF7C9</string>
 											<string>3B431C7511311D6100C5628D</string>
-											<string>3B431D02113122C800C5628D</string>
-											<string>3B431D401131261800C5628D</string>
 											<string>3B431D531131287300C5628D</string>
 											<string>3B431D601131290000C5628D</string>
-											<string>3B431D771131295400C5628D</string>
 											<string>3B431D841131299100C5628D</string>
-											<string>3B431D851131299100C5628D</string>
 											<string>3B431D871131299100C5628D</string>
-											<string>3B431D8F113129D200C5628D</string>
-											<string>3B431D90113129D200C5628D</string>
-											<string>3B431D91113129D200C5628D</string>
-											<string>3B431D92113129D200C5628D</string>
+											<string>3B431DB711312F3200C5628D</string>
+											<string>3B431DE31131327900C5628D</string>
+											<string>3B431DE41131327900C5628D</string>
+											<string>3B431DE51131327900C5628D</string>
+											<string>3B431DE61131327900C5628D</string>
+											<string>3B431DFD1131335A00C5628D</string>
+											<string>3B431DFE1131335A00C5628D</string>
+											<string>3B431DFF1131335A00C5628D</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -679,7 +678,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>288434642.617733</real>
+	<real>288437192.20362699</real>
 	<key>ToolbarConfigUserDefaultsMinorVersion</key>
 	<string>2</string>
 	<key>ToolbarDisplayMode</key>
@@ -696,7 +695,7 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>3B431D94113129D200C5628D</string>
+		<string>1C530D5B069F1CE1000CFCEE</string>
 		<string>3B431C8C11311DC200C5628D</string>
 		<string>3B431C6C11311C6500C5628D</string>
 		<string>/Users/coffex/iPhone/winterbells/Winterbells.xcodeproj</string>
@@ -1028,16 +1027,18 @@
 			<string>Yes</string>
 		</dict>
 		<dict>
+			<key>FirstTimeWindowDisplayed</key>
+			<false/>
 			<key>Identifier</key>
 			<string>windowTool.debuggerConsole</string>
+			<key>IsVertical</key>
+			<true/>
 			<key>Layout</key>
 			<array>
 				<dict>
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<integer>1</integer>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -1048,18 +1049,18 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {700, 358}}</string>
+								<string>{{0, 0}, {440, 359}}</string>
 								<key>RubberWindowFrame</key>
-								<string>149 87 700 400 0 0 1440 878 </string>
+								<string>21 579 440 400 0 0 1280 1002 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXDebugCLIModule</string>
 							<key>Proportion</key>
-							<string>358pt</string>
+							<string>359pt</string>
 						</dict>
 					</array>
 					<key>Proportion</key>
-					<string>358pt</string>
+					<string>359pt</string>
 				</dict>
 			</array>
 			<key>Name</key>
@@ -1069,21 +1070,21 @@
 				<string>PBXDebugCLIModule</string>
 			</array>
 			<key>StatusbarIsVisible</key>
-			<integer>1</integer>
+			<true/>
 			<key>TableOfContents</key>
 			<array>
 				<string>1C530D5B069F1CE1000CFCEE</string>
-				<string>1C530D5C069F1CE1000CFCEE</string>
+				<string>3B431E08113133C800C5628D</string>
 				<string>1C78EAAC065D492600B07095</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.consoleV3</string>
 			<key>WindowString</key>
-			<string>149 87 440 400 0 0 1440 878 </string>
+			<string>21 579 440 400 0 0 1280 1002 </string>
 			<key>WindowToolGUID</key>
 			<string>1C530D5B069F1CE1000CFCEE</string>
 			<key>WindowToolIsVisible</key>
-			<integer>0</integer>
+			<false/>
 		</dict>
 		<dict>
 			<key>Identifier</key>

@@ -7,12 +7,13 @@
 //
 
 #import "Entity.h"
-
+#import "World.h"
 
 @implementation Entity
 
 @synthesize gravity;
 @synthesize position;
+@synthesize world;
 
 -(void)render {
 				[sprite renderAtPoint:position centerOfImage:false];

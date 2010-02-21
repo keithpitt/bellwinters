@@ -8,6 +8,7 @@
 
 #import "Bell.h"
 #import "Player.h"
+#import "World.h"
 
 @implementation Bell
 
@@ -24,7 +25,8 @@
 }
 
 -(void)collisionWith:(Player *)player {
-				// Dissapear.
+				[world unregisterEntity:self];
+				[world registerEntity:[[Bell alloc] init]];
 }
 
 -(void)render {
