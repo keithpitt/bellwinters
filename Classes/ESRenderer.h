@@ -17,6 +17,7 @@
 #import <OpenGLES/ES1/glext.h>
 #import "World.h"
 #import "Player.h"
+#import "Bell.h"
 
 #import "AccelerometerSimulation.h"
 
@@ -35,7 +36,6 @@
 				
 				UIAccelerometer * accelerometer;
     
-				Player * player;
 				World * world;
     
 }

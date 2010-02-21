@@ -11,6 +11,7 @@
 @interface World()
 -(void)setDefaults;
 -(void)checkBounds:(Entity*)entity;
+-(void)checkCollisions:(Entity*)entity;
 @end
 
 @implementation World
@@ -61,6 +62,7 @@
 				}
 				for(Entity * entity in entities){
 								[self checkBounds:entity];
+								[self checkCollisions:entity];
 				}
 }
 
@@ -112,8 +114,16 @@
 				
 }
 
+-(void)checkCollisions:(Entity *)entity {
+				for(Entity * collider in entities) {
+								if (entity != collider && CGRectIntersectsRect([entity getRect], [collider getRect])) {
+												[entity collisionWith:collider];
+								}
+				}
+}
+
 -(void)render {	
-				for(Entity * entity in entities){
+				for(Entity * entity in entities) {
 								[entity render];
 				}
 }

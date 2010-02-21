@@ -1,5 +1,5 @@
 //
-//  Player.h
+//  Bell.h
 //  Winterbells
 //
 //  Created by Ryan Whiteley on 21/02/10.
@@ -10,13 +10,14 @@
 #import "Entity.h"
 #import "Image.h"
 
-@class Bell;
+@class Player;
 
-@interface Player : Entity {
-				// Nothing for the moment.
-				CGPoint movement;
+@interface Bell : Entity {
+				bool activated;
 }
 
--(void)collisionWith:(Bell *)bell;
+@property(nonatomic)bool activated;
+
+-(void)collisionWith:(Player *)player;
 
 @end

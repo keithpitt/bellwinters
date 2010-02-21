@@ -7,6 +7,7 @@
 //
 
 #import "Player.h"
+#import "Bell.h"
 
 @interface Player()
 BOOL grounded;
@@ -63,6 +64,13 @@ BOOL grounded;
         movement.x = 0;
     }
 				
+}
+
+-(void)collisionWith:(Bell *)bell {
+				if (!bell.activated) {
+								bell.activated = true;
+								movement.y = 20.0f;
+				}
 }
 
 -(void)collisionWithWorldX:(float)deltaX Y:(float)deltaY {

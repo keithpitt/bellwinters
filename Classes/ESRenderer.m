@@ -55,9 +55,12 @@
 								accelerometer.delegate = self;
 								
         world = [[World alloc] initWithBounds:rect];
-								player = [[Player alloc] init];
 								
-								[world registerEntity:player];
+								[world registerEntity:[[Bell alloc] init]];
+								[world registerEntity:[[Bell alloc] init]];
+								[world registerEntity:[[Bell alloc] init]];
+								
+								[world registerEntity:[[Player alloc] init]];
 								
 								lastTime = CFAbsoluteTimeGetCurrent();
 								

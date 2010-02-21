@@ -34,6 +34,10 @@
 				// Do nothing.
 }
 
+-(void)collisionWith:(Entity *)entitiy {
+				// Do nothing.
+}
+
 -(CGRect)getRect{
 				return CGRectMake(position.x, position.y, sprite.imageWidth, sprite.imageHeight);
 }

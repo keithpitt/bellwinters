@@ -24,6 +24,7 @@
 
 // Collision methods
 -(void)collisionWithWorldX:(float)deltaX Y:(float)deltaY;
+-(void)collisionWith:(Entity *)entitiy;
 
 // Game logic and rendering
 -(void)render;
