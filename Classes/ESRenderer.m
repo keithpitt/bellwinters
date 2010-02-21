@@ -54,7 +54,7 @@
 								accelerometer.updateInterval = .1;
 								accelerometer.delegate = self;
 								
-        world = [[World alloc] init];
+        world = [[World alloc] initWithBounds:rect];
 								player = [[Player alloc] init];
 								
 								[world registerEntity:player];
@@ -95,6 +95,10 @@
     
     lastTime = time;
 				
+}
+
+- (void)handleTapAtPoint:(CGPoint)point {
+				[world handleTapAtPoint:point];
 }
 
 - (void)accelerometer:(UIAccelerometer *)accelerometer didAccelerate:(UIAcceleration *)acceleration {

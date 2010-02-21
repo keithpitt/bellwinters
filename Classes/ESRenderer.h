@@ -40,7 +40,13 @@
     
 }
 
+// Game input
+- (void)handleTapAtPoint:(CGPoint)point;
+
+// Game logic
 - (void)mainGameLoop;
+
+// Graphics handling
 - (BOOL)resizeFromLayer:(CAEAGLLayer *)layer;
 
 @end

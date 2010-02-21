@@ -11,17 +11,25 @@
 
 @interface Entity : NSObject {
 				Image * sprite;
+				CGPoint gravity;
 				CGPoint position;
 }
 
 @property(nonatomic, readonly)CGPoint			position;
-@property(nonatomic, readonly)Image	*				sprite;
+@property(nonatomic)CGPoint													gravity;
 
 // Game input
 -(void)handleAcceleration:(UIAcceleration *)acceleration;
+-(void)handleTapAtPoint:(CGPoint)point;
+
+// Collision methods
+-(void)collisionWithWorldX:(float)deltaX Y:(float)deltaY;
 
 // Game logic and rendering
 -(void)render;
 -(void)update:(float)delta;
+
+// Utility methods.
+-(CGRect)getRect;
 
 @end

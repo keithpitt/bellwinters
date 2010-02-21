@@ -66,6 +66,11 @@
     return animationFrameInterval;
 }
 
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+				UITouch * touch = [touches anyObject];
+				[renderer handleTapAtPoint:[touch locationInView:self]];
+}
+
 - (void)setAnimationFrameInterval:(NSInteger)frameInterval
 {
     // Frame interval defines how many display frames must pass between each time the

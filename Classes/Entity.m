@@ -11,7 +11,7 @@
 
 @implementation Entity
 
-@synthesize sprite;
+@synthesize gravity;
 @synthesize position;
 
 -(void)render {
@@ -24,6 +24,18 @@
 
 -(void)handleAcceleration:(UIAcceleration *)acceleration {
 				// Do nothing.
+}
+
+-(void)handleTapAtPoint:(CGPoint)point {
+				// Do nothing.
+}
+
+-(void)collisionWithWorldX:(float)deltaX Y:(float)deltaY {
+				// Do nothing.
+}
+
+-(CGRect)getRect{
+				return CGRectMake(position.x, position.y, sprite.imageWidth, sprite.imageHeight);
 }
 
 @end

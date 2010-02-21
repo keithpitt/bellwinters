@@ -12,6 +12,7 @@
 
 @interface Player : Entity {
 				// Nothing for the moment.
+				CGPoint movement;
 }
 
 @end
