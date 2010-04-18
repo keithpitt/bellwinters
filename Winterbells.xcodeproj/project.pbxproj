@@ -26,15 +26,22 @@
 		3B0727F51130F5E0000BF7C9 /* AccelerometerSimulation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0727F41130F5E0000BF7C9 /* AccelerometerSimulation.m */; };
 		3B431C6E11311D0100C5628D /* Bell.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B431C6D11311D0100C5628D /* Bell.png */; };
 		3B431C7211311D2100C5628D /* Bell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B431C7111311D2100C5628D /* Bell.m */; };
+		530E86071179BF3800D60D22 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 530E86061179BF3800D60D22 /* Game.m */; };
 		53944B2911300CB700A3F820 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53944B2811300CB700A3F820 /* CoreGraphics.framework */; };
 		53944B581130116500A3F820 /* Bunny.png in Resources */ = {isa = PBXBuildFile; fileRef = 53944B571130116500A3F820 /* Bunny.png */; };
+		53C3CA15117AB6D00044CE02 /* Background.m in Sources */ = {isa = PBXBuildFile; fileRef = 53C3CA14117AB6D00044CE02 /* Background.m */; };
+		53C3CA1F117AB9A40044CE02 /* Background.png in Resources */ = {isa = PBXBuildFile; fileRef = 53C3CA1E117AB9A40044CE02 /* Background.png */; };
+		53C3CA6F117ABC8D0044CE02 /* BackgroundTile.png in Resources */ = {isa = PBXBuildFile; fileRef = 53C3CA6D117ABC8D0044CE02 /* BackgroundTile.png */; };
+		53D82620117AF288009F8126 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 53D8261F117AF288009F8126 /* Default.png */; };
+		53D82807117B0C62009F8126 /* TapToStart.png in Resources */ = {isa = PBXBuildFile; fileRef = 53D82805117B0C62009F8126 /* TapToStart.png */; };
+		53D8280A117B0C7A009F8126 /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = 53D82809117B0C7A009F8126 /* Message.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* WinterbellsAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WinterbellsAppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* WinterbellsAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WinterbellsAppDelegate.m; sourceTree = "<group>"; };
-		1D6058910D05DD3D006BFB54 /* Winterbells.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Winterbells.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D6058910D05DD3D006BFB54 /* Bellwinters.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bellwinters.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2514C26D10084DB100A42282 /* ESRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESRenderer.h; sourceTree = "<group>"; };
 		2514C26E10084DB100A42282 /* ESRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESRenderer.m; sourceTree = "<group>"; };
@@ -62,8 +69,18 @@
 		3B431C6D11311D0100C5628D /* Bell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bell.png; sourceTree = "<group>"; };
 		3B431C7011311D2100C5628D /* Bell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bell.h; sourceTree = "<group>"; };
 		3B431C7111311D2100C5628D /* Bell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bell.m; sourceTree = "<group>"; };
+		530E86051179BF3800D60D22 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
+		530E86061179BF3800D60D22 /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Game.m; sourceTree = "<group>"; };
 		53944B2811300CB700A3F820 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		53944B571130116500A3F820 /* Bunny.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bunny.png; sourceTree = "<group>"; };
+		53C3CA13117AB6D00044CE02 /* Background.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Background.h; sourceTree = "<group>"; };
+		53C3CA14117AB6D00044CE02 /* Background.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Background.m; sourceTree = "<group>"; };
+		53C3CA1E117AB9A40044CE02 /* Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Background.png; sourceTree = "<group>"; };
+		53C3CA6D117ABC8D0044CE02 /* BackgroundTile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BackgroundTile.png; sourceTree = "<group>"; };
+		53D8261F117AF288009F8126 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../../../Desktop/Default.png; sourceTree = SOURCE_ROOT; };
+		53D82805117B0C62009F8126 /* TapToStart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TapToStart.png; sourceTree = "<group>"; };
+		53D82808117B0C7A009F8126 /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
+		53D82809117B0C7A009F8126 /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Message.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Winterbells-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Winterbells-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -99,7 +116,7 @@
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1D6058910D05DD3D006BFB54 /* Winterbells.app */,
+				1D6058910D05DD3D006BFB54 /* Bellwinters.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -163,6 +180,7 @@
 		3B0725491130D600000BF7C9 /* Engine */ = {
 			isa = PBXGroup;
 			children = (
+				53C3C8ED117AAA730044CE02 /* Levels */,
 				3B431CAC11311E4A00C5628D /* Characters */,
 				3B0725411130D5D7000BF7C9 /* World.h */,
 				3B0725421130D5D7000BF7C9 /* World.m */,
@@ -189,6 +207,10 @@
 				3B07255C1130D7FD000BF7C9 /* Player.m */,
 				3B431C7011311D2100C5628D /* Bell.h */,
 				3B431C7111311D2100C5628D /* Bell.m */,
+				53C3CA13117AB6D00044CE02 /* Background.h */,
+				53C3CA14117AB6D00044CE02 /* Background.m */,
+				53D82808117B0C7A009F8126 /* Message.h */,
+				53D82809117B0C7A009F8126 /* Message.m */,
 			);
 			name = Characters;
 			sourceTree = "<group>";
@@ -207,18 +229,31 @@
 		53944AE611300C4000A3F820 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				53D82805117B0C62009F8126 /* TapToStart.png */,
+				53D8261F117AF288009F8126 /* Default.png */,
+				53C3CA6D117ABC8D0044CE02 /* BackgroundTile.png */,
+				53C3CA1E117AB9A40044CE02 /* Background.png */,
 				3B431C6D11311D0100C5628D /* Bell.png */,
 				53944B571130116500A3F820 /* Bunny.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
 		};
+		53C3C8ED117AAA730044CE02 /* Levels */ = {
+			isa = PBXGroup;
+			children = (
+				530E86051179BF3800D60D22 /* Game.h */,
+				530E86061179BF3800D60D22 /* Game.m */,
+			);
+			name = Levels;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1D6058900D05DD3D006BFB54 /* Winterbells */ = {
+		1D6058900D05DD3D006BFB54 /* Bellwinters */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "Winterbells" */;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "Bellwinters" */;
 			buildPhases = (
 				1D60588D0D05DD3D006BFB54 /* Resources */,
 				1D60588E0D05DD3D006BFB54 /* Sources */,
@@ -228,9 +263,9 @@
 			);
 			dependencies = (
 			);
-			name = Winterbells;
+			name = Bellwinters;
 			productName = Winterbells;
-			productReference = 1D6058910D05DD3D006BFB54 /* Winterbells.app */;
+			productReference = 1D6058910D05DD3D006BFB54 /* Bellwinters.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -248,7 +283,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1D6058900D05DD3D006BFB54 /* Winterbells */,
+				1D6058900D05DD3D006BFB54 /* Bellwinters */,
 			);
 		};
 /* End PBXProject section */
@@ -263,6 +298,10 @@
 				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
 				53944B581130116500A3F820 /* Bunny.png in Resources */,
 				3B431C6E11311D0100C5628D /* Bell.png in Resources */,
+				53C3CA1F117AB9A40044CE02 /* Background.png in Resources */,
+				53C3CA6F117ABC8D0044CE02 /* BackgroundTile.png in Resources */,
+				53D82620117AF288009F8126 /* Default.png in Resources */,
+				53D82807117B0C62009F8126 /* TapToStart.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +323,9 @@
 				3B0726881130E5A6000BF7C9 /* Texture2D.m in Sources */,
 				3B0727F51130F5E0000BF7C9 /* AccelerometerSimulation.m in Sources */,
 				3B431C7211311D2100C5628D /* Bell.m in Sources */,
+				530E86071179BF3800D60D22 /* Game.m in Sources */,
+				53C3CA15117AB6D00044CE02 /* Background.m in Sources */,
+				53D8280A117B0C7A009F8126 /* Message.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,7 +343,7 @@
 				GCC_PREFIX_HEADER = Winterbells_Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				INFOPLIST_FILE = "Winterbells-Info.plist";
-				PRODUCT_NAME = Winterbells;
+				PRODUCT_NAME = Bellwinters;
 			};
 			name = Debug;
 		};
@@ -315,7 +357,7 @@
 				GCC_PREFIX_HEADER = Winterbells_Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				INFOPLIST_FILE = "Winterbells-Info.plist";
-				PRODUCT_NAME = Winterbells;
+				PRODUCT_NAME = Bellwinters;
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos3.0;
 				VALIDATE_PRODUCT = YES;
@@ -353,7 +395,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "Winterbells" */ = {
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "Bellwinters" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1D6058940D05DD3E006BFB54 /* Debug */,

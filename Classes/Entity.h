@@ -16,10 +16,12 @@
 				Image * sprite;
 				CGPoint gravity;
 				CGPoint position;
+    Boolean focused;
 }
 
 @property(nonatomic, readonly)CGPoint			position;
 @property(nonatomic)CGPoint													gravity;
+@property(nonatomic)Boolean													focused;
 @property(nonatomic, assign)World							* world;
 
 // Game input
@@ -32,9 +34,15 @@
 
 // Game logic and rendering
 -(void)render;
+-(void)cleanup;
 -(void)update:(float)delta;
+-(void)kill;
 
-// Utility methods.
--(CGRect)getRect;
+// Position methods.
+-(CGPoint)getPositionOnScreen;
+-(CGRect)getRectOnScreen;
+
+// Custom setters
+-(void)setPosition:(CGPoint)point;
 
 @end

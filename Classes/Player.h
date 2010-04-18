@@ -15,8 +15,13 @@
 @interface Player : Entity {
 				// Nothing for the moment.
 				CGPoint movement;
+    Boolean active;
+    Boolean killed;
+    Boolean hidden;
 }
 
--(void)collisionWith:(Bell *)bell;
+@property(nonatomic)Boolean active;
+@property(nonatomic)Boolean hidden;
+@property(nonatomic)Boolean killed;
 
 @end

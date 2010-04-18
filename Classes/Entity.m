@@ -14,13 +14,22 @@
 @synthesize gravity;
 @synthesize position;
 @synthesize world;
+@synthesize focused;
 
 -(void)render {
-				[sprite renderAtPoint:position centerOfImage:false];
+				[sprite renderAtPoint:[self getPositionOnScreen] centerOfImage:false];
+}
+
+-(void)cleanup {
+				// Do nothing.
 }
 
 -(void)update:(float)delta {
 				// Do nothing.
+}
+
+-(void)kill {
+    [world unregisterEntity:self];
 }
 
 -(void)handleAcceleration:(UIAcceleration *)acceleration {
@@ -39,8 +48,18 @@
 				// Do nothing.
 }
 
--(CGRect)getRect{
-				return CGRectMake(position.x, position.y, sprite.imageWidth, sprite.imageHeight);
+-(void)setPosition:(CGPoint)point {
+    position.x = point.x;
+    position.y = point.y;
+}
+
+-(CGPoint)getPositionOnScreen {
+				return [world positionOnScreen:position];
+}
+
+-(CGRect)getRectOnScreen {
+    CGPoint point = [self getPositionOnScreen];
+				return CGRectMake(point.x, point.y, sprite.imageWidth, sprite.imageHeight);
 }
 
 @end

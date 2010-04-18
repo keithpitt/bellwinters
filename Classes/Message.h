@@ -1,8 +1,8 @@
 //
-//  Bell.h
+//  Message.h
 //  Winterbells
 //
-//  Created by Ryan Whiteley on 21/02/10.
+//  Created by Keith Pitt on 18/04/10.
 //  Copyright 2010 asdfasdf. All rights reserved.
 //
 
@@ -10,12 +10,10 @@
 #import "Entity.h"
 #import "Image.h"
 
-@class Player;
-
-@interface Bell : Entity {
-				bool activated;
+@interface Message : Entity {
+    bool hidden;
 }
 
-@property(nonatomic)bool activated;
+@property(nonatomic, readwrite)bool hidden;
 
 @end

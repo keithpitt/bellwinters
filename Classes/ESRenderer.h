@@ -18,6 +18,7 @@
 #import "World.h"
 #import "Player.h"
 #import "Bell.h"
+#import "Game.h"
 
 #import "AccelerometerSimulation.h"
 

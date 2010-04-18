@@ -9,19 +9,31 @@
 #import "World.h"
 
 @interface World()
+Boolean paused;
 -(void)setDefaults;
 -(void)checkBounds:(Entity*)entity;
 -(void)checkCollisions:(Entity*)entity;
+-(void)doCollisionWithEntity:(Entity*)entity And:(Entity*)collider;
 @end
 
+
 @implementation World
+
+@synthesize entities;
+@synthesize player;
+@synthesize offset;
 
 - (id)init {
 				self = [super init];
 				if (self != nil) {
 								[self setDefaults];
+        [self setup];
 				}
 				return self;
+}
+
+-(void)setup {
+    // Nothing goes here. This is overwritten in the subclass.
 }
 
 - (id)initWithBounds:(CGRect)rect {
@@ -29,25 +41,58 @@
 				if (self != nil) {
 								[self setDefaults];
 								bounds = rect;
+        center.x = bounds.size.width / 2;
+        center.y = bounds.size.height / 2;
+        [self setup];
 				}
 				return self;
 }
 
 -(void)setDefaults{
-				gravity = CGPointMake(0, -0.83);
+				// gravity = CGPointMake(0, -0.83);
+    gravity = CGPointMake(0, -0.45);
 				windResistance = 0;
 				entities = [[NSMutableArray alloc] init];
 				entitiesToRelease = [[NSMutableArray alloc] init];
+    entitiesToAdd = [[NSMutableArray alloc] init];
+    paused = false;
+    
+    // No world offset
+    offset.x = 0;
+    offset.y = 0;
+}
+
+-(void)replay {
+    paused = true;
+    [self cleanup];
+    [entitiesToRelease release];
+    [entitiesToAdd release];
+    [entities release];    
+    [self setDefaults];
+    [self setup];
+}
+
+-(void)registerPlayer:(Player*)entity {
+				player = entity;
+    [self registerEntity:entity];
 }
 
 -(void)registerEntity:(Entity*)entity {
 				entity.gravity = gravity;
 				entity.world = self;
-				[entities addObject:entity];
+				[entitiesToAdd addObject:entity];
 }
 
 -(void)unregisterEntity:(Entity *)entity {
-				[entitiesToRelease addObject:entity];
+    if([entitiesToAdd containsObject:entity]) {
+        [entitiesToAdd removeObject:entity];
+    } else {
+        [entitiesToRelease addObject:entity];
+    }
+}
+
+-(CGPoint)positionOnScreen:(CGPoint)x {
+    return CGPointMake(offset.x + x.x, offset.y + x.y);
 }
 
 - (void)handleTapAtPoint:(CGPoint)point {
@@ -63,8 +108,13 @@
 }
 
 -(void)update:(float)delta {
-				
-				// First release any objects that needed to be relased
+    
+    // If we have paused the flow.
+    if(paused) {
+        return;
+    }
+
+				// Firstly, release any objects that needed to be relased
 				// from the previous iteration.
 				for (Entity * entity in entitiesToRelease) {
 								[entities removeObject:entity];
@@ -74,13 +124,26 @@
 				// Remove all the entites that needed to be cleared.
 				// We should have all our memory back now...
 				[entitiesToRelease removeAllObjects];
+    
+    // Secondaly, add entities to the "real" entities array.
+    for (Entity * entity in entitiesToAdd) {
+        [entities addObject:entity];
+    }
+    
+    // Remove all the entities that we needed to add.
+    [entitiesToAdd removeAllObjects];
 				
 				// Create a temporary clone of the entities array.
 				NSMutableArray * updaters = [[NSMutableArray alloc]initWithArray:entities];
+    
+    // Game logic implemented in the level.
+    [self logic];
 				
 				for(Entity * entity in updaters){
 								[entity update:delta];
 				}
+    
+    [self focus];
 				
 				for(Entity * entity in updaters){
 								[self checkBounds:entity];
@@ -93,8 +156,8 @@
 
 -(void)checkBounds:(Entity*)entity{
 
-				//				NSLog(@"%f",[entity getRect].size.width);
-				CGRect rect = [entity getRect];
+				//				NSLog(@"%f",[entity rectInWorld].size.width);
+				CGRect rect = [entity getRectOnScreen];
 				
 				float x = 0;
 				float y = 0;
@@ -145,8 +208,13 @@
 				NSMutableArray * colliders = [[NSMutableArray alloc]initWithArray:entities];
 				
 				for(Entity * collider in colliders) {
-								if (entity != collider && CGRectIntersectsRect([entity getRect], [collider getRect])) {
-												[entity collisionWith:collider];
+        CGRect entityRect = [entity getRectOnScreen];
+        CGRect colliderRect = [collider getRectOnScreen];
+								if (entity != collider && CGRectIntersectsRect(entityRect, colliderRect)) {
+            // NSLog(@"entityRect: x: %f, y: %f, width: %f, height: %f", entityRect.origin.x, entityRect.origin.y, entityRect.size.width, entityRect.size.height);
+            // NSLog(@"colliderRect: x: %f, y: %f, width: %f, height: %f", colliderRect.origin.x, colliderRect.origin.y, colliderRect.size.width, colliderRect.size.height);
+            // NSLog(@"--");
+            [self doCollisionWithEntity:entity And:collider];
 								}
 				}
 				
@@ -154,10 +222,33 @@
 				
 }
 
+-(void)doCollisionWithEntity:(Entity*)entity And:(Entity*)collider {
+    [entity collisionWith:collider];
+}
+
+-(void)focus {
+    if(player.position.y >= center.y) {
+        if (player.focused) {
+            offset.y = center.y - player.position.y;
+        }
+        // NSLog(@"center: %f, player.position.y: %f, offset.x: %f", center.y, player.position.y, offset.y); 
+    }
+}
+
 -(void)render {	
 				for(Entity * entity in entities) {
 								[entity render];
 				}
+}
+
+-(void)cleanup {	
+				for(Entity * entity in entities) {
+								[entity cleanup];
+				}
+}
+
+-(void)logic {
+    // Nothing goes here. This is overwritten in the subclass.
 }
 
 -(void)dealloc {

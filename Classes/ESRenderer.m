@@ -54,12 +54,7 @@
 								accelerometer.updateInterval = .1;
 								accelerometer.delegate = self;
 								
-        world = [[World alloc] initWithBounds:rect];
-								
-								[world registerEntity:[[Bell alloc] init]];
-								[world registerEntity:[[Bell alloc] init]];
-								
-								[world registerEntity:[[Player alloc] init]];
+        world = [[Game alloc] initWithBounds:rect];
 								
 								lastTime = CFAbsoluteTimeGetCurrent();
 								
@@ -89,6 +84,7 @@
     glClear(GL_COLOR_BUFFER_BIT);
 				
 				[world render];
+    [world cleanup];
     
     // This application only creates a single color renderbuffer which is already bound at this point.
     // This call is redundant, but needed if dealing with multiple renderbuffers.
