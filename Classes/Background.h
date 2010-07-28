@@ -17,6 +17,7 @@
     CGPoint spriteTilePositionA;
     CGPoint spriteTilePositionB;   
     int backgroundHeight;
+    float speed;
     
 }
 

@@ -38,7 +38,6 @@
 }
 
 - (void)replay {
-    paused = true;
     lastEntity = NULL;
     score = 0;
     highestPoint = 0;

@@ -35,6 +35,7 @@
 		53D82620117AF288009F8126 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 53D8261F117AF288009F8126 /* Default.png */; };
 		53D82807117B0C62009F8126 /* TapToStart.png in Resources */ = {isa = PBXBuildFile; fileRef = 53D82805117B0C62009F8126 /* TapToStart.png */; };
 		53D8280A117B0C7A009F8126 /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = 53D82809117B0C7A009F8126 /* Message.m */; };
+		53D82903117B1A2C009F8126 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 53D82902117B1A2C009F8126 /* Icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,6 +82,7 @@
 		53D82805117B0C62009F8126 /* TapToStart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TapToStart.png; sourceTree = "<group>"; };
 		53D82808117B0C7A009F8126 /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
 		53D82809117B0C7A009F8126 /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Message.m; sourceTree = "<group>"; };
+		53D82902117B1A2C009F8126 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Winterbells-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Winterbells-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -229,6 +231,7 @@
 		53944AE611300C4000A3F820 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				53D82902117B1A2C009F8126 /* Icon.png */,
 				53D82805117B0C62009F8126 /* TapToStart.png */,
 				53D8261F117AF288009F8126 /* Default.png */,
 				53C3CA6D117ABC8D0044CE02 /* BackgroundTile.png */,
@@ -302,6 +305,7 @@
 				53C3CA6F117ABC8D0044CE02 /* BackgroundTile.png in Resources */,
 				53D82620117AF288009F8126 /* Default.png in Resources */,
 				53D82807117B0C62009F8126 /* TapToStart.png in Resources */,
+				53D82903117B1A2C009F8126 /* Icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,12 +386,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "Don't Code Sign";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PREBINDING = NO;
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos3.2;
 			};
 			name = Release;

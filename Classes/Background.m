@@ -26,6 +26,7 @@
         position.x = 0; position.y = 0;
         
         backgroundHeight = 480;
+        speed = 0.05f;
 				}
 				return self;
 }
